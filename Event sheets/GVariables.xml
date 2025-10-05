@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>GVariables</name>
+    <events>
+        <variable constant="0" name="intType" sid="289505206478890" static="0" type="number">0</variable>
+        <variable constant="0" name="TESTE" sid="660098290606138" static="0" type="number">0</variable>
+        <variable constant="0" name="offset" sid="210292300194536" static="0" type="number">1</variable>
+        <variable constant="0" name="height" sid="579794413388114" static="0" type="number">0</variable>
+        <variable constant="0" name="width" sid="661156756785638" static="0" type="number">0</variable>
+        <variable constant="0" name="walkSpeed" sid="606618394185929" static="0" type="number">150</variable>
+        <variable constant="0" name="firstclick" sid="701875923695490" static="0" type="number">0</variable>
+        <variable constant="0" name="distanceMTP" sid="108325603148728" static="0" type="number">0</variable>
+        <variable constant="0" name="distanceMTP2" sid="640304867234240" static="0" type="number">0</variable>
+    </events>
+</c2eventsheet>
