@@ -1,0 +1,327 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>InteractiveItem</name>
+    <events>
+        <variable constant="0" name="objectID" sid="407760046429482" static="0" type="number">0</variable>
+        <variable constant="0" name="interactionType" sid="743404898206656" static="0" type="number">0</variable>
+        <variable constant="0" name="interaction" sid="252624617861398" static="0" type="number">0</variable>
+        <variable constant="0" name="trigger" sid="147672673665554" static="0" type="number">0</variable>
+        <include>GVariables</include>
+        <event-group description="" sid="937005642254211" title="InteractionTypes">
+            <sub-events>
+                <event-block sid="463771919854321">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="368960524766263" type="Touch">
+                            <param id="0" name="Object">InteractiveObject</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="303790366080350">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="604142311600063" type="System">
+                                    <param id="0" name="Variable">intType</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="124685382852977" type="System">
+                                    <param id="0" name="Variable">objectID</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="341236684632159" type="System">
+                                    <param id="0" name="Variable">interactionType</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="188394955306131" type="System">
+                                    <param id="0" name="Variable">interaction</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="765719733939166" type="System">
+                                    <param id="0" name="Variable">trigger</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="645197320196333">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="896799515877069" type="System">
+                                    <param id="0" name="Variable">intType</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="156591441689978" type="System">
+                                    <param id="0" name="Variable">objectID</param>
+                                    <param id="1" name="Value">InteractiveObject.id</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="145297179336122" type="System">
+                                    <param id="0" name="Variable">interactionType</param>
+                                    <param id="1" name="Value">InteractiveObject.intType1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="734106114329386" type="System">
+                                    <param id="0" name="Variable">interaction</param>
+                                    <param id="1" name="Value">interactiveObject.int1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="492519945405196">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="749176495622437" type="System">
+                                    <param id="0" name="Variable">intType</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="557337629336454" type="System">
+                                    <param id="0" name="Variable">objectID</param>
+                                    <param id="1" name="Value">InteractiveObject.id</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="812254036709925" type="System">
+                                    <param id="0" name="Variable">interactionType</param>
+                                    <param id="1" name="Value">InteractiveObject.intType2</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="608949819498721" type="System">
+                                    <param id="0" name="Variable">interaction</param>
+                                    <param id="1" name="Value">interactiveObject.int2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="221127260924880">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="793113172085869" type="System">
+                                    <param id="0" name="Variable">intType</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="452136617597837" type="System">
+                                    <param id="0" name="Variable">objectID</param>
+                                    <param id="1" name="Value">InteractiveObject.id</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="872229339958458" type="System">
+                                    <param id="0" name="Variable">interactionType</param>
+                                    <param id="1" name="Value">InteractiveObject.intType3</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="132151008598328" type="System">
+                                    <param id="0" name="Variable">interaction</param>
+                                    <param id="1" name="Value">interactiveObject.int3</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="501407442285727">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="228332045677343" type="System">
+                                    <param id="0" name="Variable">intType</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">4</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="115412671044997" type="System">
+                                    <param id="0" name="Variable">objectID</param>
+                                    <param id="1" name="Value">InteractiveObject.id</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="145872557314666" type="System">
+                                    <param id="0" name="Variable">interactionType</param>
+                                    <param id="1" name="Value">InteractiveObject.intType4</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="800452368727715" type="System">
+                                    <param id="0" name="Variable">interaction</param>
+                                    <param id="1" name="Value">interactiveObject.int4</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="151287463942012" title="Interactions">
+            <sub-events>
+                <event-block sid="930875891344909">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="840512943978769" type="System">
+                            <param id="0" name="Variable">objectID</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="596702670257696">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="317828740604149" type="System">
+                                    <param id="0" name="Variable">interactionType</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="434809244407141">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="280894952846535" type="System">
+                                            <param id="0" name="Variable">trigger</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="334759580305405">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="237150341580572" type="System">
+                                                    <param id="0" name="Variable">interaction</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">0</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Add to" sid="585299156592954" type="System">
+                                                    <param id="0" name="Variable">TESTE</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="329192945754245">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="463497539956806" type="System">
+                                    <param id="0" name="Variable">interactionType</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="925487668114040">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="545183942036395" type="System">
+                                            <param id="0" name="Variable">trigger</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="615523449141362">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="161177887520551" type="System">
+                                                    <param id="0" name="Variable">interaction</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">0</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Add to" sid="363106130498572" type="System">
+                                                    <param id="0" name="Variable">TESTE</param>
+                                                    <param id="1" name="Value">2</param>
+                                                </action>
+                                            </actions>
+                                            <sub-events>
+                                                <event-block sid="487922940154781">
+                                                    <conditions>
+                                                        <condition id="-7" name="Compare instance variable" sid="394603828552680" type="InteractiveObject">
+                                                            <param id="0" name="Instance variable">id</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">objectID</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-11" name="Add to" sid="803933798222248" type="InteractiveObject">
+                                                            <param id="0" name="Instance variable">int2</param>
+                                                            <param id="1" name="Value">1</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                        <event-block sid="391251226998788">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="848054896302826" type="System">
+                                                    <param id="0" name="Variable">interaction</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">1</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Set value" sid="583597414054899" type="System">
+                                                    <param id="0" name="Variable">TESTE</param>
+                                                    <param id="1" name="Value">10</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="300887765595548">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="325454190331419" type="System">
+                                    <param id="0" name="Variable">interactionType</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">3</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="281918049066357">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="246817717895056" type="System">
+                                            <param id="0" name="Variable">trigger</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="436986849757819">
+                                            <conditions />
+                                            <actions />
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="606122675701822">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="629706828062527" type="System">
+                                    <param id="0" name="Variable">interactionType</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">4</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="806485024047395">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="588798541395180" type="System">
+                                            <param id="0" name="Variable">trigger</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="258303020378754">
+                                            <conditions />
+                                            <actions />
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>
