@@ -10,8 +10,10 @@
     <unique-id>2xzfrrxx2qivy</unique-id>
     <saved-with-version>28000</saved-with-version>
     <used-plugins>
+        <plugin author="Scirra" id="AJAX" version="1">AJAX</plugin>
         <plugin author="Scirra" id="Arr" version="1">Array</plugin>
-        <plugin author="Scirra" id="Dictionary" version="1">Dictionary</plugin>
+        <plugin author="Scirra" id="Function" version="1">Function</plugin>
+        <plugin author="Yann Granjon" id="JSON" version="1">JSON</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
@@ -107,7 +109,7 @@
             <object-type name="InteractiveObject" sid="916626903312872">
                 <plugin id="Sprite" />
                 <instance-variables>
-                    <instance-variable name="id" sid="541992962403036" type="number" />
+                    <instance-variable name="id" sid="411682372958268" type="string" />
                     <instance-variable name="intType1" sid="900293077387180" type="number" />
                     <instance-variable name="int1" sid="278437186640349" type="number" />
                     <instance-variable name="intTrigger1" sid="783189352996100" type="number" />
@@ -189,8 +191,16 @@
             </object-type>
         </object-folder>
         <object-folder name="Dictionaries">
-            <object-type global="1" name="intDictionary" sid="147949451455868">
-                <plugin id="Dictionary" />
+            <object-type name="Function" sid="407141241685792">
+                <plugin id="Function" />
+            </object-type>
+        </object-folder>
+        <object-folder name="JSON">
+            <object-type global="1" name="JSON" sid="937091703889702">
+                <plugin id="JSON" />
+            </object-type>
+            <object-type name="AJAX" sid="549667315289181">
+                <plugin id="AJAX" />
             </object-type>
         </object-folder>
     </object-folder>
@@ -211,6 +221,8 @@
             </properties>
         </global-instance>
         <global-instance type="Keyboard" uid="8" />
+        <global-instance type="Function" uid="23" />
+        <global-instance type="AJAX" uid="21" />
     </global-instances>
     <sounds-folder />
     <music-folder />
@@ -223,6 +235,6 @@
             <file name="icon-256.png" />
             <file name="loading-logo.png" />
         </file-folder>
-        <file-folder name="JSON" />
+        <file name="interactions.json" />
     </files-folder>
 </c2project>

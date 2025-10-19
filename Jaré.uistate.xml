@@ -12,8 +12,8 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     <open-tabs>
         <layout order="0">Layout 1</layout>
         <event-sheet order="1">GVariables</event-sheet>
-        <event-sheet order="3">Main</event-sheet>
         <event-sheet active="1" order="2">InteractiveItem</event-sheet>
+        <event-sheet order="3">Main</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -29,13 +29,13 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="object-folder/GameObjects/" />
         <folder expanded="1" path="object-folder/UI/" />
         <folder expanded="1" path="object-folder/Dictionaries/" />
+        <folder expanded="1" path="object-folder/JSON/" />
         <folder expanded="1" path="layout-folder/" />
         <folder expanded="1" path="event-folder/" />
         <folder expanded="1" path="file-folder/" />
         <folder expanded="1" path="sound-folder/" />
         <folder expanded="1" path="music-folder/" />
         <folder expanded="1" path="file-folder/Icons/" />
-        <folder expanded="1" path="file-folder/JSON/" />
         <folder expanded="1" path="animation-folder/Player/" />
         <folder expanded="1" path="animation-folder/InventarioObj/" />
         <folder expanded="1" path="animation-folder/InteractiveObject/" />

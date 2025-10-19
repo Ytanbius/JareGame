@@ -257,7 +257,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <id>0</id>
+                        <id>objectID</id>
                         <intType1>0</intType1>
                         <int1>0</int1>
                         <intTrigger1>0</intTrigger1>
@@ -274,8 +274,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>742</x>
-                        <y>-62</y>
+                        <x>610</x>
+                        <y>253</y>
                         <z>0</z>
                         <width>100</width>
                         <height>100</height>
@@ -548,7 +548,7 @@
                 <depth>1</depth>
             </properties>
         </instance>
-        <instance type="intDictionary" uid="21" />
+        <instance type="JSON" uid="22" />
     </nonworld-instances>
     <effects />
 </c2layout>

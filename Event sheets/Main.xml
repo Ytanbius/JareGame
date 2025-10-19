@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Main</name>
     <events>
+        <include>InteractiveItem</include>
         <include>GVariables</include>
         <event-block sid="303852254290067">
             <conditions>
@@ -201,33 +202,55 @@
                         <condition id="0" name="On key pressed" sid="489391158238743" type="Keyboard">
                             <param id="0" name="Key">69</param>
                         </condition>
-                        <condition id="-8" name="Compare two values" sid="298315056452567" type="System">
-                            <param id="0" name="First value">Inventario.Width</param>
-                            <param id="1" name="Comparison">2</param>
-                            <param id="2" name="Second value">6</param>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="455883658454884" type="Function">
+                            <param id="0" name="Name">&quot;addItem&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;teste&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="566149721435469">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="135413945954466" type="Keyboard">
+                            <param id="0" name="Key">81</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="5" name="Push" sid="760044417906558" type="Inventario">
-                            <param id="0" name="Where">0</param>
-                            <param id="1" name="Value">&quot;TESTE&quot;</param>
-                            <param id="2" name="Axis">0</param>
+                        <action id="0" name="Call function" sid="701081014526490" type="Function">
+                            <param id="0" name="Name">&quot;removeItem&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
                         </action>
                     </actions>
+                </event-block>
+                <event-block sid="930111745031811">
+                    <conditions>
+                        <condition id="0" name="On function" sid="567770969368371" type="Function">
+                            <param id="0" name="Name">&quot;addItem&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
                     <sub-events>
-                        <event-block sid="458772157622541">
+                        <event-block sid="503056483014975">
                             <conditions>
-                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="246534282319639" type="InventarioObj">
-                                    <param id="0" name="Instance variable">hasItem</param>
+                                <condition id="-8" name="Compare two values" sid="298315056452567" type="System">
+                                    <param id="0" name="First value">Inventario.Width</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Second value">6</param>
                                 </condition>
                                 <condition id="-33" name="Pick by comparison" sid="943992678724342" type="System">
                                     <param id="0" name="Object">InventarioObj</param>
                                     <param id="1" name="Expression">InventarioObj.ID</param>
                                     <param id="2" name="Comparison">0</param>
-                                    <param id="3" name="Value">Inventario.Width-1</param>
+                                    <param id="3" name="Value">Inventario.Width</param>
                                 </condition>
                             </conditions>
                             <actions>
+                                <action id="5" name="Push" sid="760044417906558" type="Inventario">
+                                    <param id="0" name="Where">0</param>
+                                    <param id="1" name="Value">Function.Param(0)</param>
+                                    <param id="2" name="Axis">0</param>
+                                </action>
                                 <action id="-3" name="Create object" sid="697192664722729" type="System">
                                     <param id="0" name="Object to create">Text</param>
                                     <param id="1" name="Layer">0</param>
@@ -235,7 +258,7 @@
                                     <param id="3" name="Y">InventarioObj.Y</param>
                                 </action>
                                 <action id="0" name="Set text" sid="362340507086770" type="Text">
-                                    <param id="0" name="Text">&quot;Item &quot; &amp; str(Inventario.Width)</param>
+                                    <param id="0" name="Text">Function.Param(0)</param>
                                 </action>
                                 <action id="-10" name="Set value" sid="982246361642258" type="Text">
                                     <param id="0" name="Instance variable">ID</param>
@@ -243,12 +266,32 @@
                                 </action>
                             </actions>
                         </event-block>
+                        <event-block sid="154015944171021">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="383949496052197" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="684665685818174" type="System">
+                                    <param id="0" name="Object to create">Text</param>
+                                    <param id="1" name="Layer">0</param>
+                                    <param id="2" name="X">-10</param>
+                                    <param id="3" name="Y">-10</param>
+                                </action>
+                                <action id="0" name="Set text" sid="892348041689362" type="Text">
+                                    <param id="0" name="Text">&quot;ERRO: Tentou colocar um item no inventário cheio: itemID: &quot; &amp; Function.Param(0)</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="710121877871962" type="Text">
+                                    <param id="0" name="Instance variable">ID</param>
+                                    <param id="1" name="Value">-1</param>
+                                </action>
+                            </actions>
+                        </event-block>
                     </sub-events>
                 </event-block>
-                <event-block sid="566149721435469">
+                <event-block sid="646434897987253">
                     <conditions>
-                        <condition id="0" name="On key pressed" sid="135413945954466" type="Keyboard">
-                            <param id="0" name="Key">81</param>
+                        <condition id="0" name="On function" sid="390413652805656" type="Function">
+                            <param id="0" name="Name">&quot;removeItem&quot;</param>
                         </condition>
                         <condition id="-8" name="Compare two values" sid="531727184382726" type="System">
                             <param id="0" name="First value">Inventario.Width</param>
@@ -263,7 +306,7 @@
                         </action>
                     </actions>
                     <sub-events>
-                        <event-block sid="662863876725364">
+                        <event-block sid="157790219349106">
                             <conditions>
                                 <condition id="-33" name="Pick by comparison" sid="411460780311758" type="System">
                                     <param id="0" name="Object">InventarioObj</param>
@@ -287,40 +330,35 @@
         </event-group>
         <event-group description="" sid="623078517174999" title="Interações">
             <sub-events>
-                <event-group description="" sid="890476633487528" title="Interação 1">
-                    <sub-events>
-                        <event-block sid="492762803604403">
-                            <conditions>
-                                <condition id="17" name="On tap object" sid="565681653831541" type="Touch">
-                                    <param id="0" name="Object">IntButton</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-9" name="Set value" sid="770266649671869" type="System">
-                                    <param id="0" name="Variable">intType</param>
-                                    <param id="1" name="Value">IntButton.Type</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="510452316178269">
-                            <conditions>
-                                <condition id="0" name="On any touch start" sid="565132804424520" type="Touch" />
-                                <condition id="-14" name="Compare variable" sid="155502303177388" type="System">
-                                    <param id="0" name="Variable">intType</param>
-                                    <param id="1" name="Comparison">1</param>
-                                    <param id="2" name="Value">0</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-9" name="Set value" sid="284512949902610" type="System">
-                                    <param id="0" name="Variable">intType</param>
-                                    <param id="1" name="Value">0</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-group>
+                <event-block sid="492762803604403">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="565681653831541" type="Touch">
+                            <param id="0" name="Object">IntButton</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="770266649671869" type="System">
+                            <param id="0" name="Variable">intType</param>
+                            <param id="1" name="Value">IntButton.Type</param>
+                        </action>
+                    </actions>
+                </event-block>
             </sub-events>
         </event-group>
+        <event-block disabled="1" sid="532492670419274">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="504424606407740" type="System">
+                    <param id="0" name="Interval (seconds)">5</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="342610148040145" type="Text">
+                    <param id="0" name="Instance variable">ID</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">-1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="224655849555608" type="Text" />
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>

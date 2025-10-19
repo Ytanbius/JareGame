@@ -1,0 +1,32 @@
+{
+    "objects":
+    {
+        "objectID":
+        {
+            "int1":
+            {
+                "intResult":1,
+                "resultContent":["itemlegal", "itemlegal2"],
+                "preRequisities":{"reqItem":[], "reqItemCount":0, "reqNotMetMsg":""}
+            },
+            "int2":
+            {
+                "intResult":0,
+                "resultContent":[],
+                "preRequisities":{"reqItem":[], "reqItemCount":0, "reqNotMetMsg":""}
+            },
+            "int3":
+            {
+                "intResult":0,
+                "resultContent":[],
+                "preRequisities":{"reqItem":[], "reqItemCount":0, "reqNotMetMsg":""}
+            },
+            "int4":
+            {
+                "intResult":0,
+                "resultContent":[],
+                "preRequisities":{"reqItem":[], "reqItemCount":0, "reqNotMetMsg":""}
+            }
+        }
+    }
+}
