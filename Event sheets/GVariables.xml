@@ -4,7 +4,6 @@
     <name>GVariables</name>
     <events>
         <variable constant="0" name="intType" sid="289505206478890" static="0" type="number">0</variable>
-        <variable constant="0" name="TESTE" sid="660098290606138" static="0" type="number">0</variable>
         <variable constant="0" name="offset" sid="210292300194536" static="0" type="number">1</variable>
         <variable constant="0" name="height" sid="579794413388114" static="0" type="number">0</variable>
         <variable constant="0" name="width" sid="661156756785638" static="0" type="number">0</variable>

@@ -12,6 +12,7 @@
     <used-plugins>
         <plugin author="Scirra" id="AJAX" version="1">AJAX</plugin>
         <plugin author="Scirra" id="Arr" version="1">Array</plugin>
+        <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
         <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Yann Granjon" id="JSON" version="1">JSON</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
@@ -37,6 +38,7 @@
     </window-size>
     <pixel-rounding>0</pixel-rounding>
     <preview-effects>1</preview-effects>
+    <first-layout>Menu</first-layout>
     <use-loader-layout>0</use-loader-layout>
     <configuration-settings>
         <prop name="Clear background">Yes</prop>
@@ -54,164 +56,213 @@
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
     <object-folder>
-        <object-folder name="Inputs">
-            <object-type name="Touch" sid="326660557246616">
-                <plugin id="Touch" />
-            </object-type>
-            <object-type name="Mouse" sid="363440641051953">
-                <plugin id="Mouse" />
-            </object-type>
-            <object-type name="Keyboard" sid="170927604364717">
-                <plugin id="Keyboard" />
-            </object-type>
+        <object-folder name="Menu">
+            <object-folder name="UI">
+                <object-type name="menuTitle" sid="865478747363097">
+                    <plugin id="Text" />
+                </object-type>
+            </object-folder>
+            <object-folder name="Objects" />
         </object-folder>
-        <object-folder name="Arrays">
-            <object-type global="1" name="Inventario" sid="229565809673430">
-                <plugin id="Arr" />
-            </object-type>
+        <object-folder name="Game">
+            <object-folder name="GameObjects">
+                <object-type name="Player" sid="514298647590201">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="Sine" sid="433051249938204">
+                            <behavior id="Sin" />
+                        </behavior-type>
+                        <behavior-type name="Bullet" sid="849167825745199">
+                            <behavior id="Bullet" />
+                        </behavior-type>
+                        <behavior-type name="CustomMovement" sid="798826196211483">
+                            <behavior id="custom" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="974610382470983" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="walkarea" sid="679095381753365">
+                    <plugin id="TiledBg" />
+                    <texture />
+                </object-type>
+                <object-type name="InventarioObj" sid="726654169743081">
+                    <plugin id="Sprite" />
+                    <instance-variables>
+                        <instance-variable name="ID" sid="548520470458189" type="number" />
+                        <instance-variable name="hasItem" sid="269972021149505" type="boolean" />
+                    </instance-variables>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="460848857871718" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="InteractiveObject" sid="916626903312872">
+                    <plugin id="Sprite" />
+                    <instance-variables>
+                        <instance-variable name="id" sid="411682372958268" type="string" />
+                        <instance-variable name="intType1" sid="900293077387180" type="number" />
+                        <instance-variable name="int1" sid="278437186640349" type="number" />
+                        <instance-variable name="intTrigger1" sid="783189352996100" type="number" />
+                        <instance-variable name="intType2" sid="214790391271285" type="number" />
+                        <instance-variable name="int2" sid="891382198753853" type="number" />
+                        <instance-variable name="intTrigger2" sid="183826529321178" type="number" />
+                        <instance-variable name="intType3" sid="986766844588267" type="number" />
+                        <instance-variable name="int3" sid="526444546846410" type="number" />
+                        <instance-variable name="intTrigger3" sid="961573193474921" type="number" />
+                        <instance-variable name="intType4" sid="707570036166265" type="number" />
+                        <instance-variable name="int4" sid="981167084133892" type="number" />
+                        <instance-variable name="intTrigger4" sid="524285882248995" type="number" />
+                    </instance-variables>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="879315031251114" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="CaixaDialogo" sid="723485516056558">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="197279257307846" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+            </object-folder>
+            <object-folder name="JSON">
+                <object-type global="1" name="JSON" sid="937091703889702">
+                    <plugin id="JSON" />
+                </object-type>
+                <object-type name="AJAX" sid="549667315289181">
+                    <plugin id="AJAX" />
+                </object-type>
+            </object-folder>
+            <object-folder name="UI">
+                <object-folder name="Textos">
+                    <object-type name="dialogoText" sid="740256520441731">
+                        <plugin id="Text" />
+                    </object-type>
+                    <object-type name="geralGameText" sid="356472899657354">
+                        <plugin id="Text" />
+                        <instance-variables>
+                            <instance-variable name="ID" sid="951213324772319" type="number" />
+                        </instance-variables>
+                    </object-type>
+                </object-folder>
+                <object-type name="Point" sid="899972721479771">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="Pin" sid="372378312422375">
+                            <behavior id="Pin" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="159428332304073" speed="5">
+                            <frame duration="1" hotspotX="0.6" hotspotY="0.6" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="Point2" sid="636817286238722">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="Pin" sid="226959589475437">
+                            <behavior id="Pin" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="753489421427888" speed="5">
+                            <frame duration="1" hotspotX="0.6" hotspotY="0.6" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="IntButton" sid="145633622163265">
+                    <plugin id="Sprite" />
+                    <instance-variables>
+                        <instance-variable name="Type" sid="458978903865489" type="number" />
+                    </instance-variables>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="987618615337952" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="HUDdown" sid="185252727246051">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="836665023237841" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                                <collision-poly>
+                                    <point x="0.351765" y="0" />
+                                    <point x="0.648235" y="0" />
+                                    <point x="0.648235" y="1" />
+                                    <point x="0.351765" y="1" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+            </object-folder>
+            <object-folder name="Arrays">
+                <object-type global="1" name="Inventario" sid="229565809673430">
+                    <plugin id="Arr" />
+                </object-type>
+            </object-folder>
         </object-folder>
-        <object-folder name="GameObjects">
-            <object-type name="Player" sid="514298647590201">
-                <plugin id="Sprite" />
-                <behaviors>
-                    <behavior-type name="Sine" sid="433051249938204">
-                        <behavior id="Sin" />
-                    </behavior-type>
-                    <behavior-type name="Bullet" sid="849167825745199">
-                        <behavior id="Bullet" />
-                    </behavior-type>
-                    <behavior-type name="CustomMovement" sid="798826196211483">
-                        <behavior id="custom" />
-                    </behavior-type>
-                </behaviors>
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="974610382470983" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type name="walkarea" sid="679095381753365">
-                <plugin id="TiledBg" />
-                <texture />
-            </object-type>
-            <object-type name="InventarioObj" sid="726654169743081">
-                <plugin id="Sprite" />
-                <instance-variables>
-                    <instance-variable name="ID" sid="548520470458189" type="number" />
-                    <instance-variable name="hasItem" sid="269972021149505" type="boolean" />
-                </instance-variables>
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="460848857871718" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type name="InteractiveObject" sid="916626903312872">
-                <plugin id="Sprite" />
-                <instance-variables>
-                    <instance-variable name="id" sid="411682372958268" type="string" />
-                    <instance-variable name="intType1" sid="900293077387180" type="number" />
-                    <instance-variable name="int1" sid="278437186640349" type="number" />
-                    <instance-variable name="intTrigger1" sid="783189352996100" type="number" />
-                    <instance-variable name="intType2" sid="214790391271285" type="number" />
-                    <instance-variable name="int2" sid="891382198753853" type="number" />
-                    <instance-variable name="intTrigger2" sid="183826529321178" type="number" />
-                    <instance-variable name="intType3" sid="986766844588267" type="number" />
-                    <instance-variable name="int3" sid="526444546846410" type="number" />
-                    <instance-variable name="intTrigger3" sid="961573193474921" type="number" />
-                    <instance-variable name="intType4" sid="707570036166265" type="number" />
-                    <instance-variable name="int4" sid="981167084133892" type="number" />
-                    <instance-variable name="intTrigger4" sid="524285882248995" type="number" />
-                </instance-variables>
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="879315031251114" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    </animation>
-                </animation-folder>
-            </object-type>
+        <object-folder name="Geral">
+            <object-folder name="Inputs">
+                <object-type name="Touch" sid="326660557246616">
+                    <plugin id="Touch" />
+                </object-type>
+                <object-type name="Mouse" sid="363440641051953">
+                    <plugin id="Mouse" />
+                </object-type>
+                <object-type name="Keyboard" sid="170927604364717">
+                    <plugin id="Keyboard" />
+                </object-type>
+            </object-folder>
+            <object-folder name="Funções">
+                <object-type name="Function" sid="407141241685792">
+                    <plugin id="Function" />
+                </object-type>
+            </object-folder>
         </object-folder>
-        <object-folder name="UI">
-            <object-type name="Point" sid="899972721479771">
-                <plugin id="Sprite" />
-                <behaviors>
-                    <behavior-type name="Pin" sid="372378312422375">
-                        <behavior id="Pin" />
-                    </behavior-type>
-                </behaviors>
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="159428332304073" speed="5">
-                        <frame duration="1" hotspotX="0.6" hotspotY="0.6" />
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type name="Point2" sid="636817286238722">
-                <plugin id="Sprite" />
-                <behaviors>
-                    <behavior-type name="Pin" sid="226959589475437">
-                        <behavior id="Pin" />
-                    </behavior-type>
-                </behaviors>
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="753489421427888" speed="5">
-                        <frame duration="1" hotspotX="0.6" hotspotY="0.6" />
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type name="IntButton" sid="145633622163265">
-                <plugin id="Sprite" />
-                <instance-variables>
-                    <instance-variable name="Type" sid="458978903865489" type="number" />
-                </instance-variables>
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="987618615337952" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type name="HUDdown" sid="185252727246051">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="836665023237841" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                            <collision-poly>
-                                <point x="0.351765" y="0" />
-                                <point x="0.648235" y="0" />
-                                <point x="0.648235" y="1" />
-                                <point x="0.351765" y="1" />
-                            </collision-poly>
-                        </frame>
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type name="Text" sid="356472899657354">
-                <plugin id="Text" />
-                <instance-variables>
-                    <instance-variable name="ID" sid="951213324772319" type="number" />
-                </instance-variables>
-            </object-type>
-        </object-folder>
-        <object-folder name="Dictionaries">
-            <object-type name="Function" sid="407141241685792">
-                <plugin id="Function" />
-            </object-type>
-        </object-folder>
-        <object-folder name="JSON">
-            <object-type global="1" name="JSON" sid="937091703889702">
-                <plugin id="JSON" />
-            </object-type>
-            <object-type name="AJAX" sid="549667315289181">
-                <plugin id="AJAX" />
-            </object-type>
-        </object-folder>
+        <object-type name="menuText" sid="547148701546404">
+            <plugin id="Text" />
+            <instance-variables>
+                <instance-variable name="id" sid="524747049215410" type="string" />
+            </instance-variables>
+        </object-type>
+        <object-type name="menuButton" sid="831868601294877">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="id" sid="689058486998347" type="string" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="270531854781010" speed="0">
+                    <frame duration="0" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="0" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Browser" sid="586218845908687">
+            <plugin id="Browser" />
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
-        <layout>Layout 1.xml</layout>
+        <layout>Menu.xml</layout>
+        <layout>FaseTeste.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>Main.xml</event-sheet>
         <event-sheet>GVariables.xml</event-sheet>
         <event-sheet>InteractiveItem.xml</event-sheet>
+        <event-sheet>Dialogo.xml</event-sheet>
+        <event-sheet>Menu.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Mouse" uid="1" />
@@ -223,6 +274,7 @@
         <global-instance type="Keyboard" uid="8" />
         <global-instance type="Function" uid="23" />
         <global-instance type="AJAX" uid="21" />
+        <global-instance type="Browser" uid="31" />
     </global-instances>
     <sounds-folder />
     <music-folder />

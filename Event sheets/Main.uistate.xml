@@ -6,7 +6,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     <show-addaction-links>1</show-addaction-links>
     <scroll-pos>0</scroll-pos>
     <conditions-column>240</conditions-column>
-    <actions-namecolumn>80</actions-namecolumn>
+    <actions-namecolumn>60</actions-namecolumn>
     <condition-namecolumns>
         <nest>80</nest>
         <nest>80</nest>
@@ -18,6 +18,8 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <nest>16</nest>
     </condition-namecolumns>
     <events>
-        <event collapsed="1" sid="809061333051317" />
+        <event collapsed="1" sid="832666155770973" />
+        <event collapsed="1" sid="465951613190473" />
+        <event collapsed="1" sid="230356919723462" />
     </events>
 </c2uistate>

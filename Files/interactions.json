@@ -6,26 +6,30 @@
             "int1":
             {
                 "intResult":1,
-                "resultContent":["itemlegal", "itemlegal2"],
-                "preRequisities":{"reqItem":[], "reqItemCount":0, "reqNotMetMsg":""}
+                "resultContent":["item comum"],
+                "rewardItem":[],
+                "preRequisities":{"reqItem":[], "reqNotMetMsg":""}
             },
             "int2":
             {
-                "intResult":0,
-                "resultContent":[],
-                "preRequisities":{"reqItem":[], "reqItemCount":0, "reqNotMetMsg":""}
+                "intResult":2,
+                "resultContent":["Olá, tudo beleza?"],
+                "rewardItem":[],
+                "preRequisities":{"reqItem":[], "reqNotMetMsg":""}
             },
             "int3":
             {
-                "intResult":0,
-                "resultContent":[],
-                "preRequisities":{"reqItem":[], "reqItemCount":0, "reqNotMetMsg":""}
+                "intResult":2,
+                "resultContent":["Tenho algo legal aqui", "Toma pra você"],
+                "rewardItem":["item raro"],
+                "preRequisities":{"reqItem":[], "reqNotMetMsg":""}
             },
             "int4":
             {
-                "intResult":0,
-                "resultContent":[],
-                "preRequisities":{"reqItem":[], "reqItemCount":0, "reqNotMetMsg":""}
+                "intResult":1,
+                "resultContent":["item raro"],
+                "rewardItem":[],
+                "preRequisities":{"reqItem":[], "reqNotMetMsg":""}
             }
         }
     }

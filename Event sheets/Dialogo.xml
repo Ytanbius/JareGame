@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Dialogo</name>
+    <events>
+        <include>GVariables</include>
+        <variable constant="0" name="hasReward" sid="175683327745275" static="0" type="number">0</variable>
+        <variable constant="0" name="talkIndex" sid="365298814428762" static="0" type="number">0</variable>
+        <event-block sid="219922330311470">
+            <conditions>
+                <condition id="0" name="On function" sid="570533323781709" type="Function">
+                    <param id="0" name="Name">&quot;onStartTalk&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="200" name="Set Current Path" sid="616797816829487" type="JSON">
+                    <param id="0" name="Reference point">0</param>
+                    <param id="1" name="Key {n}">&quot;objects&quot;{###}Function.Param(0){###}&quot;int&quot;&amp;intType</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="547200850694273">
+                    <conditions />
+                    <actions>
+                        <action id="-12" name="Set group active" sid="408534057710233" type="System">
+                            <param id="0" name="Group name">&quot;stopOnTalk&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="516188669013388" type="CaixaDialogo">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="715782498698889" type="dialogoText">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="178878680922742" type="Function">
+                            <param id="0" name="Name">&quot;onUpdateTalk&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="441287075851917">
+            <conditions>
+                <condition id="0" name="On function" sid="478168618349788" type="Function">
+                    <param id="0" name="Name">&quot;onUpdateTalk&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="796036848631583">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="960767089964419" type="System">
+                            <param id="0" name="Variable">talkIndex</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Value">JSON.Size(1,&quot;resultContent&quot;)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="825182135075220" type="dialogoText">
+                            <param id="0" name="Text">JSON.Value(1,&quot;resultContent&quot;,talkIndex)</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="641401432845869" type="System">
+                            <param id="0" name="Seconds">2</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="137823401433943" type="System">
+                            <param id="0" name="Variable">talkIndex</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="621784572318519" type="Function">
+                            <param id="0" name="Name">&quot;onUpdateTalk&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="276541505783014">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="147873402735736" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="870663115914203" type="Function">
+                            <param id="0" name="Name">&quot;onFinishTalk&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="584943399074109">
+            <conditions>
+                <condition id="0" name="On function" sid="719134169860955" type="Function">
+                    <param id="0" name="Name">&quot;onFinishTalk&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="570787670627279" type="System">
+                    <param id="0" name="Variable">talkIndex</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="257186439949418">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="273157984459550" type="System">
+                            <param id="0" name="First value">JSON.Size(1,&quot;rewardItem&quot;)</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Second value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="149316838592131" type="System">
+                            <param id="0" name="Variable">hasReward</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="717925979806799">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="389854628220046" type="System">
+                            <param id="0" name="Variable">hasReward</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-10" name="For" sid="752629197311126" type="System">
+                            <param id="0" name="Name">&quot;giveReward&quot;</param>
+                            <param id="1" name="Start index">1</param>
+                            <param id="2" name="End index">JSON.Length(1,&quot;rewardItem&quot;)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="613943153715692" type="Function">
+                            <param id="0" name="Name">&quot;addItem&quot;</param>
+                            <param id="1" name="Parameter {n}">JSON.Value(1,&quot;rewardItem&quot;,loopindex-1)</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="304541868373955">
+                            <conditions />
+                            <actions>
+                                <action id="-9" name="Set value" sid="428768365939126" type="System">
+                                    <param id="0" name="Variable">hasReward</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="239466293101658">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="743760766326206" type="System">
+                            <param id="0" name="Variable">hasReward</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Set group active" sid="721430864292742" type="System">
+                            <param id="0" name="Group name">&quot;stopOnTalk&quot;</param>
+                            <param id="1" name="State">2</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="497779604277456" type="CaixaDialogo">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="544662190716040" type="dialogoText">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

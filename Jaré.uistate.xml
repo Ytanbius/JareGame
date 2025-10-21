@@ -10,10 +10,10 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout order="0">Layout 1</layout>
-        <event-sheet order="1">GVariables</event-sheet>
-        <event-sheet active="1" order="2">InteractiveItem</event-sheet>
-        <event-sheet order="3">Main</event-sheet>
+        <layout active="1" order="1">FaseTeste</layout>
+        <event-sheet order="0">GVariables</event-sheet>
+        <event-sheet order="3">Dialogo</event-sheet>
+        <event-sheet order="2">InteractiveItem</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -24,12 +24,18 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     <families-expanded root="1" />
     <folders-expanded>
         <folder expanded="1" path="object-folder/" />
-        <folder expanded="1" path="object-folder/Inputs/" />
-        <folder expanded="1" path="object-folder/Arrays/" />
-        <folder expanded="1" path="object-folder/GameObjects/" />
-        <folder expanded="1" path="object-folder/UI/" />
-        <folder expanded="1" path="object-folder/Dictionaries/" />
-        <folder expanded="1" path="object-folder/JSON/" />
+        <folder expanded="1" path="object-folder/Menu/" />
+        <folder expanded="1" path="object-folder/Menu/UI/" />
+        <folder expanded="1" path="object-folder/Menu/Objects/" />
+        <folder expanded="1" path="object-folder/Game/" />
+        <folder expanded="1" path="object-folder/Game/GameObjects/" />
+        <folder expanded="0" path="object-folder/Game/JSON/" />
+        <folder expanded="1" path="object-folder/Game/UI/" />
+        <folder expanded="1" path="object-folder/Game/UI/Textos/" />
+        <folder expanded="0" path="object-folder/Game/Arrays/" />
+        <folder expanded="0" path="object-folder/Geral/" />
+        <folder expanded="0" path="object-folder/Geral/Inputs/" />
+        <folder expanded="0" path="object-folder/Geral/Funções/" />
         <folder expanded="1" path="layout-folder/" />
         <folder expanded="1" path="event-folder/" />
         <folder expanded="1" path="file-folder/" />
@@ -39,9 +45,11 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/Player/" />
         <folder expanded="1" path="animation-folder/InventarioObj/" />
         <folder expanded="1" path="animation-folder/InteractiveObject/" />
+        <folder expanded="1" path="animation-folder/CaixaDialogo/" />
         <folder expanded="1" path="animation-folder/Point/" />
         <folder expanded="1" path="animation-folder/Point2/" />
         <folder expanded="1" path="animation-folder/IntButton/" />
         <folder expanded="1" path="animation-folder/HUDdown/" />
+        <folder expanded="1" path="animation-folder/menuButton/" />
     </folders-expanded>
 </c2uistate>
